@@ -9,3 +9,13 @@ export const formatTime = (milliseconds: number) => {
 
 export const convertNumsToPer = (match: string) =>
   String.fromCharCode(match.charCodeAt(0) + 1728);
+
+export const validAddressType = (ipAddress: string) => {
+  if (IPV4_REGEX.test(ipAddress)) {
+    return "ipv4";
+  } else if (IPV6_REGEX.test(ipAddress)) {
+    return "ipv6";
+  } else {
+    return false;
+  }
+};
