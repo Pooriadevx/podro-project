@@ -14,7 +14,6 @@ const PhoneNumStep: React.FC = () => {
     const input = (e.target as HTMLInputElement).querySelector("input");
 
     if (input?.value.trim() !== "" && input?.validity.valid) {
-      console.log(input.value);
       setStep(LoginSteps.VERIFY_CODE);
       setPhoneNumber(input.value);
     }

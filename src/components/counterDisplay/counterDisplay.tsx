@@ -73,7 +73,7 @@ const CounterDisplay: React.FC = React.memo(() => {
       </div>
       <button form="form" className={classes.button} type="submit">
         <span>{formatTime(counter)}</span>
-        {counter ? null : "ارسال مجدد"}
+        {counter ? "تایید" : "ارسال مجدد"}
       </button>
       <span className={classes.error} data-show={"hide"}>
         کد وارد شده صحیح نمی باشد
