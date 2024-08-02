@@ -1,0 +1,51 @@
+.wrapper {
+  border-radius: 8px;
+  height: 56px;
+  width: 80%;
+  border: 1px solid var(--smoke-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &_input {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    padding-inline-start: 34px;
+    > input {
+      all: unset;
+      width: 100%;
+      height: 100%;
+      text-align: right;
+      font-size: 16px;
+      padding-inline-start: 4px;
+      &::placeholder {
+        color: rgba(126, 131, 143, 1);
+        position: absolute;
+        right: 4px;
+      }
+    }
+    > img {
+      position: absolute;
+      right: 10px;
+      top: 28%;
+    }
+  }
+
+  &_buttonSearch {
+    all: unset;
+    width: 72px;
+    height: 100%;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(
+      255.96deg,
+      var(--secondary-color) 0%,
+      var(--primary-color) 100%
+    );
+  }
+}
