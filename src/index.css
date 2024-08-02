@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "IRANSANS";
+  src: local("IRANSANS"), url(./assets/font/IRANSans-web.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body,
+html {
+  text-align: center;
+  direction: rtl;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "IRANSANS";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
