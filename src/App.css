@@ -1,0 +1,14 @@
+.App {
+  width: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "IRANSANS";
+  background-image: url("./assets/svg/background-pattern.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.Toast {
+  font-family: "IRANSANS";
+}
