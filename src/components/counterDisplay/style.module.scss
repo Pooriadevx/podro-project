@@ -41,3 +41,14 @@
     pointer-events: all;
   }
 }
+
+.error {
+  font-size: 12px;
+  &[data-show="hide"] {
+    display: none;
+  }
+  &[data-show="show"] {
+    display: block;
+    color: red;
+  }
+}

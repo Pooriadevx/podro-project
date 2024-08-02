@@ -16,16 +16,24 @@ const CounterDisplay: React.FC = React.memo(() => {
     setCounter(RESEND_TIMER);
   };
 
+  const handleErrorMessage = (isShow: boolean) => {
+    const { dataset } = document.querySelector(
+      "[data-show]"
+    ) as HTMLSpanElement;
+    dataset.show = isShow ? "show" : "hide";
+  };
+
   const onSubmit = (e: FormEvent) => {
     e.preventDefault();
     const code = otpBoxRefs.map((i) => i.value).join("");
 
     if (counter) {
       if (code === VERIFY_CODE) {
+        handleErrorMessage(false);
         toast.success("با موفقیت وارد شدید");
         setTimeout(() => window.location.replace("/location-data"), 3000);
       } else {
-        toast.warning(`رمز وارد شده اشتباه است`);
+        handleErrorMessage(true);
       }
     } else {
       resendCode();
@@ -65,8 +73,11 @@ const CounterDisplay: React.FC = React.memo(() => {
       </div>
       <button form="form" className={classes.button} type="submit">
         <span>{formatTime(counter)}</span>
-        {counter ? "تایید" : "ارسال مجدد"}
+        {counter ? null : "ارسال مجدد"}
       </button>
+      <span className={classes.error} data-show={"hide"}>
+        کد وارد شده صحیح نمی باشد
+      </span>
     </>
   );
 });
