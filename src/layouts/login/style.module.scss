@@ -1,0 +1,14 @@
+@import "../../theme/_global.module.scss";
+
+.container {
+  @extend .shadowBox;
+  gap: 32px;
+  width: 375px;
+  position: relative;
+  > a {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../theme/__global.module.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  > p:last-child {
+    @extend .secondaryText;
+  }
+}
+.form {
+  width: inherit;
+  &_input {
+    all: unset;
+    width: 90%;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid var(--smoke-color);
+    border-radius: 8px;
+    text-align: right;
+    padding-inline: 4%;
+
+    ::-webkit-outer-spin-button,
+    ::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    ::placeholder {
+      font-size: 16px;
+      position: absolute;
+      right: 4%;
+    }
+  }
+}
+
+.button {
+  @extend .confirmButton;
+}
+
+.signUp {
+  display: flex;
+  gap: 8px;
+  > p {
+    font-size: 14px;
+  }
+  > a {
+    @extend .customAnchor;
+  }
+}
