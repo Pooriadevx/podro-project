@@ -1,0 +1,58 @@
+:root {
+  --primary-color: #0c317c;
+  --secondary-color: #1043a6;
+  --smoke-color: rgba(234, 236, 240, 1);
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.shadowBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 16px;
+  padding: 42px 16px;
+  background-color: white;
+  border: 1px solid rgba(234, 236, 240, 0.4);
+}
+
+.secondaryText {
+  font-size: 14px;
+  color: rgba(126, 131, 143, 1);
+}
+
+.customAnchor {
+  font-size: 14px;
+  background: linear-gradient(
+    255.96deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-bottom: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.confirmButton {
+  width: 100%;
+  border-radius: 8px;
+  border: none;
+  height: 48px;
+  color: #f9f5ff;
+  height: 48px;
+  line-height: 24px;
+  font-family: "IRANSANS";
+  cursor: pointer;
+  background: linear-gradient(
+    255.96deg,
+    var(--secondary-color) 0%,
+    var(--primary-color) 100%
+  );
+}
