@@ -1,0 +1,44 @@
+@import "../../theme/_global.module.scss";
+
+.container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  height: 170px;
+  padding-block: 16px;
+  border-radius: 12px;
+  background-color: rgba(246, 247, 249, 1);
+  > div {
+    margin-inline: 16px;
+  }
+  &_map {
+    width: 30%;
+    height: inherit;
+  }
+  &_items {
+    display: grid;
+    direction: ltr;
+    grid-auto-flow: column;
+    grid-gap: 12px 32px;
+    grid-template-rows: repeat(4, 1fr);
+    &_item {
+      display: flex;
+      > span:first-child {
+        @extend .secondaryText;
+        font-size: 16px;
+        margin-right: 5px;
+      }
+      > span:nth-child(2) {
+        font-weight: 500;
+      }
+      #ip {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 120px;
+        overflow: hidden;
+      }
+    }
+  }
+}
